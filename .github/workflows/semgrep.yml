@@ -21,4 +21,8 @@ jobs:
       image: returntocorp/semgrep
     steps:
     - uses: actions/checkout@v3
-    - run: apk add py-pip && pip install pipenv && pipenv lock && semgrep ci && semgrep ci --supply-chain
+    - run: apk add py-pip
+    - run: pip install pipenv
+    - run: pipenv lock
+    - run: ls
+    - run: semgrep ci
