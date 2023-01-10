@@ -24,5 +24,6 @@ jobs:
     - run: apk add py-pip
     - run: pip install pipenv
     - run: pipenv lock
+    - run: cat Pipfile.lock
     - run: ls
     - run: semgrep ci
